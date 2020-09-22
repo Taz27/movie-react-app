@@ -22,7 +22,7 @@ function MovieApp() {
     setIsLoading(true);
 
     //fetch movie JSON data from omdb API using the search string  
-    fetch(`https://www.omdbapi.com/?s=${movieSearch}&apikey=thewdb`)
+    fetch(`https://www.omdbapi.com/?s=${movieSearch.trim()}&apikey=thewdb`)
         .then(res => res.json())
         .then(res => {
             //console.log(res);
